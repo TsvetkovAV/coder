@@ -31,7 +31,7 @@ def run():
     # for row in csv_data:
     duplicates = 0
     train_data = [['description', 'manufacturer', 'correct_code', 'correct_desc', 'form', 'amount', 'dosage']]
-    xlsx_data = load_workbook(PATH + '/data/full_codes.xlsx', read_only=True, data_only=True)
+    xlsx_data = load_workbook(PATH + '/src/data/full_codes.xlsx', read_only=True, data_only=True)
     for row in xlsx_data['Коды перекодировок'].rows:
         row = [cell.value for cell in row]
         if validate_row(row):
@@ -77,7 +77,7 @@ def run():
 
     print("Done")
     print("Duplicates =",duplicates)
-    with open('data/train_data.csv', mode='w') as csv_file:
+    with open(PATH + '/src/data/train_data.csv', mode='w') as csv_file:
         writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for row in train_data:
             writer.writerow(row)

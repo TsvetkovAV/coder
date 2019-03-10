@@ -22,7 +22,7 @@ def Mg_to_mg(match):
 
 def run():
     cursor = db.cursor(pymysql.cursors.DictCursor)
-    data = open(PATH + '/data/train_data.csv')
+    data = open(PATH + '/src/data/train_data.csv')
     csv_data = csv.reader(data)
     for i in range(4):
         data.seek(0)

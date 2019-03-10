@@ -31,7 +31,7 @@ def group_sub_function(m):
 global word_found
 global word_sub
 cursor = db.cursor(pymysql.cursors.DictCursor)
-data = open(PATH + '/data/train_data.csv')
+data = open(PATH + '/src/data/train_data.csv')
 csv_data = csv.reader(data)
 # for i in ['sum(lcs*user_weight)*1000+bm25', 'bm25', '1', 'sum(hit_count*user_weight)', 'sum(lcs*user_weight)',
 #           'sum((word_count+(lcs-1)*max_lcs)*user_weight)', 'field_mask',
