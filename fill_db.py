@@ -9,7 +9,7 @@ from src.normalize import normalize_desc
 # create user puls_user;
 # grant all privileges on database puls to puls_user;
 
-conn = psycopg2.connect(dbname='puls', host='localhost', user='puls_user')
+conn = psycopg2.connect(dbname='puls', host='localhost', user='puls_user', password='puls_user_pwd')
 conn.autocommit = True
 cursor = conn.cursor()
 

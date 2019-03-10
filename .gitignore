@@ -1,4 +1,4 @@
 sphinx-*
-sphinx_data
+sphinx_data/searchd/*
 .idea
 __pycache__
